@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Diki Apriyanto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #27ae60; --dark: #2c3e50; --light: #f4f7f6; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        nav { position: fixed; top: 0; width: 100%; padding: 1rem 2rem; background: var(--white); z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; font-weight: 600; font-size: 0.9rem; }
+
+        header { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('Kegiatan5.jpeg'); background-size: cover; background-position: center; padding-top: 60px; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.2); object-fit: cover; margin-bottom: 1rem; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 1.5rem; }
+        
+        /* Tambahan Style untuk Tombol Kontak */
+        .hero-contact { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .btn-link { padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-linkedin { background: #0077b5; color: white; }
+        .btn-email { background: var(--dark); color: white; }
+        .btn-link:hover { opacity: 0.8; transform: translateY(-3px); }
+
+        section { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; position: relative; }
+        .section-title::after { content: ''; width: 50px; height: 4px; background: var(--primary); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 4rem; background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .exp-grid:nth-child(even) { direction: rtl; }
+        .exp-grid:nth-child(even) .exp-text { direction: ltr; }
+        .exp-image img { width: 100%; border-radius: 10px; object-fit: cover; aspect-ratio: 4/3; }
+        .exp-text h3 { color: var(--primary); margin-bottom: 1rem; }
+
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .cert-card { background: var(--white); padding: 1rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        .cert-card img { width: 100%; border-radius: 5px; margin-bottom: 1rem; border: 1px solid #eee; }
+
+        footer { background: var(--dark); color: var(--white); padding: 50px 2rem; text-align: center; }
+        .footer-info { margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9; }
+
+        @media (max-width: 768px) { .exp-grid { grid-template-columns: 1fr; } .exp-grid:nth-child(even) { direction: ltr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">DIKI APRIYANTO</a>
+    <div class="nav-links">
+        <a href="#profil">Profil</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#sertifikat">Sertifikat</a>
+    </div>
+</nav>
+
+<header id="profil">
+    <div class="hero">
+        <img src="Profil.jpeg" alt="Diki Apriyanto" class="profile-img">
+        <h1>Diki Apriyanto</h1>
+        <p>Lulusan S1 Agroteknologi (IPK 3,77) dari Universitas PGRI Yogyakarta. Ahli dalam budidaya tanaman, riset lapangan, dan manajemen pertanian berkelanjutan.</p>
+        
+        <div class="hero-contact">
+            <a href="https://wa.me/6285758456486" class="btn-link btn-wa" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/diki-apriyanto-154a1a271" class="btn-link btn-linkedin" target="_blank">LinkedIn</a>
+            <a href="mailto:dikiajaa494@gmail.com" class="btn-link btn-email">Email</a>
+        </div>
+    </div>
+</header>
+
+<section id="kegiatan">
+    <h2 class="section-title">Dokumentasi Kegiatan & Pengalaman</h2>
+    
+    <div class="exp-grid">
+        <div class="exp-image"><img src="Kegiatan1.jpeg" alt="Presenter ICSA"></div>
+        <div class="exp-text">
+            <h3>Presenter Internasional (ICSA 2026)</h3>
+            <p>Menyampaikan hasil riset tentang ketahanan tanaman padi terhadap cekaman kekeringan di International Conference on Sustainable Agriculture. Pengalaman ini membuktikan kemampuan saya dalam analisis data dan komunikasi ilmiah di tingkat global.</p>
+        </div>
+    </div>
+
+    <div class="exp-grid">
+        <div class="exp-image"><img src="Kegiatan2.jpeg" alt="Riset Greenhouse"></div>
+        <div class="exp-text">
+            <h3>Riset & Budidaya Greenhouse</h3>
+            <p>Bertanggung jawab dalam pengelolaan harian tanaman di lingkungan terkontrol. Fokus pada pengujian nutrisi dan media tanam untuk mengoptimalkan pertumbuhan vegetatif dan generatif bibit tanaman.</p>
+        </div>
+    </div>
+
+    <div class="exp-grid">
+        <div class="exp-image"><img src="Kegiatan4.jpeg" alt="Magang Madukismo"></div>
+        <div class="exp-text">
+            <h3>Magang PG-PS Madukismo</h3>
+            <p>Mempelajari siklus industri gula secara utuh, mulai dari manajemen lahan tebu hingga proses ekstraksi di pabrik. Berperan dalam pengamatan hama dan efisiensi pemupukan di lapangan.</p>
+        </div>
+    </div>
+
+    <div class="exp-grid">
+        <div class="exp-image"><img src="Kegiatan3.jpeg" alt="Analisis Data"></div>
+        <div class="exp-text">
+            <h3>Analisis & Pencatatan Data</h3>
+            <p>Melakukan pengumpulan data statistik lapangan secara presisi. Terbiasa menggunakan metode ANOVA dan Regresi untuk menarik kesimpulan yang akurat guna perbaikan produktivitas pertanian.</p>
+        </div>
+    </div>
+</section>
+
+<section id="sertifikat" style="background-color: #f9f9f9;">
+    <h2 class="section-title">Sertifikat & Penghargaan</h2>
+    <div class="cert-grid">
+        <div class="cert-card">
+            <img src="Sertifikat1.jpeg" alt="Sertifikat Silat">
+            <p>Juara 3 Seni Tunggal Putra - Pencak Silat Tapak Suci (2022)</p>
+        </div>
+        <div class="cert-card">
+            <img src="Sertifikat2.jpeg" alt="Sertifikat OSIS">
+            <p>Anggota Satgas Kesehatan OSIS SMAN 2 Menggala</p>
+        </div>
+        <div class="cert-card">
+            <img src="Sertifikat3.jpeg" alt="Sertifikat ICSA">
+            <p>Sertifikat Presenter ICSA 2026 (Denpasar, Bali)</p>
+        </div>
+        <div class="cert-card">
+            <img src="Sertifikat4.jpeg" alt="Sertifikat HMP">
+            <p>Staff Departemen Penelitian HMP Agroteknologi</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-info">
+        <p><strong>Diki Apriyanto</strong></p>
+        <p>Email: dikiajaa494@gmail.com | Telp: +62 857-5845-6486</p>
+        <p>LinkedIn: linkedin.com/in/diki-apriyanto-154a1a271</p>
+        <p>Alamat: Cimangguk Blok A, Menggala, Tulang Bawang, Lampung</p>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Diki Apriyanto | Portfolio Agroteknologi Profesional</p>
+</footer>
+
+</body>
+</html>
